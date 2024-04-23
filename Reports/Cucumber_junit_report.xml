@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="171.049" tests="15" skipped="0" failures="1" errors="0">
+<testcase classname="User Login to LMS Portal" name="Verify admin is able to land on home page" time="19.495">
+<system-out><![CDATA[
+Given Admin launch the browser..............................................passed
+When Admin gives the correct LMS portal URL.................................passed
+Then Login Page is displayed................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Verify the header of the login page" time="8.293">
+<system-out><![CDATA[
+Given Admin launch the browser..............................................passed
+When Admin gives the correct LMS portal URL.................................passed
+Then "Sign in to continue" text should be displayed.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Verify text above the first text field" time="8.176">
+<system-out><![CDATA[
+Given Admin launch the browser..............................................passed
+When Admin gives the correct LMS portal URL.................................passed
+Then Username should be displayed above the first text field................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Verify the Username input field" time="9.001">
+<system-out><![CDATA[
+Given Admin launch the browser..............................................passed
+When Admin gives the correct LMS portal URL.................................passed
+Then Username input field element should be present in the login page.......passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Verify text above the second text field" time="15.08">
+<system-out><![CDATA[
+Given Admin launch the browser..............................................passed
+When Admin gives the correct LMS portal URL.................................passed
+Then Password should be displayed above the second text field...............passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Verify the Password input field" time="8.012">
+<system-out><![CDATA[
+Given Admin launch the browser..............................................passed
+When Admin gives the correct LMS portal URL.................................passed
+Then Password input field element should be present in the login page.......passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Verify the Login button" time="15.12">
+<system-out><![CDATA[
+Given Admin launch the browser..............................................passed
+When Admin gives the correct LMS portal URL.................................passed
+Then Login button should be present in the login page.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Verify the Forgot password link" time="12.91">
+<system-out><![CDATA[
+Given Admin launch the browser..............................................passed
+When Admin gives the correct LMS portal URL.................................passed
+Then Forgot password link should present in the login page..................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Verify the eye icon is present in the password field" time="13.221">
+<system-out><![CDATA[
+Given Admin launch the browser..............................................passed
+When Admin gives the correct LMS portal URL.................................passed
+Then Eye Icon should be present in the password field.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Validate Login with valid credentials" time="8.997">
+<failure type="org.junit.ComparisonFailure" message="expected:&lt;[]&gt; but was:&lt;[http://qa.v1.container.comptivia.com/login]&gt;">
+<![CDATA[org.junit.ComparisonFailure: expected:<[]> but was:<[http://qa.v1.container.comptivia.com/login]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at lms.StepDefinition.LoginStepDef.successfully_redirected_to_base_app_page(LoginStepDef.java:148)
+	at ✽.Successfully redirected to Base app Page(file:///C:/Users/arvin/eclipse-workspace/lms_Rathika/src/test/resources/Features/01_lms.AdminLogin.feature:61)
+]]>
+</failure>
+<system-out><![CDATA[
+Given Admin is in Login Page................................................passed
+When Admin clicks Login button after entering Valid Username and Valid Password.passed
+Then Successfully redirected to Base app Page...............................failed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Validate Login with invalid credentials" time="8.678">
+<system-out><![CDATA[
+Given Admin is in Login Page................................................passed
+When Admin clicks Login button after entering Invalid Username and Invalid Password.passed
+Then Error Message is appeared..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Validate Login with empty/blank Username and valid password" time="13.62">
+<system-out><![CDATA[
+Given Admin is in Login Page................................................passed
+When Admin clicks Login button after entering Invalid/blank Username and Valid Password.passed
+Then Error Message is appeared..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Validate Login with valid Username and empty/blank password" time="8.379">
+<system-out><![CDATA[
+Given Admin is in Login Page................................................passed
+When Admin clicks Login button after entering Valid Username and Invalid/blank Password.passed
+Then Error Message is appeared..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Validate Login with empty/blank Username and empty/blank password" time="13.211">
+<system-out><![CDATA[
+Given Admin is in Login Page................................................passed
+When Admin clicks Login button after entering Invalid/blank Username and Invalid/blank Password.passed
+Then Error Message is appeared..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login to LMS Portal" name="Verify Forget Password Link" time="8.261">
+<system-out><![CDATA[
+Given Admin is in Login Page................................................passed
+When Admin clicks on Forget Password Link...................................passed
+Then Successfully redirected to Forgot Password Page........................passed
+]]></system-out>
+</testcase>
+</testsuite>
