@@ -32,12 +32,11 @@ public class LoginStepDef extends BaseClass
 	public void admin_gives_the_correct_lms_portal_url() 
 	{
 	    String LMSUrl = config.getString("url");
-	    System.out.println("LMS URL : ");
-	    System.out.println(LMSUrl);
+	    System.out.println("LMS URL : "+LMSUrl);
 	    
 	    testContext.InitializePageObject(testContext.getDriver());
 	    testContext.getDriver().get(LMSUrl);
-	    
+	    log.info("LMS Base URL : "+LMSUrl);
 			    
 	}
 
@@ -49,9 +48,9 @@ public class LoginStepDef extends BaseClass
 		
 		System.out.println("Current URL : " );
 		System.out.println(currentURL);
-		log.info(currentURL);
 		
 		assertEquals(LMSUrl,currentURL);	
+		log.info("Expected URL : "+LMSUrl+"Actual URL : "+currentURL);
 
 	}
 
@@ -60,7 +59,7 @@ public class LoginStepDef extends BaseClass
 	{
 		String header = testContext.getLoginPageObject().LoginPageHeader();
 		assertEquals(PageHeader,header);
-		log.info("Page Header Validation");
+		log.info("Page Header Validation - " +header);
 
 	}
 
